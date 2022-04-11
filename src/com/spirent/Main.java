@@ -13,7 +13,7 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        File directory = new File("C:/Users/Tomás/Desktop/numbers");
+        File directory = new File("C:/path/to/root/directory");
         Set<PhoneNumber> phoneNumbers = readPhoneNumbersFromDirectoryFiles(directory.listFiles());
         phoneNumbers.stream().filter(Objects::nonNull).map(phoneNumber -> phoneNumber.getFormattedFullNumber()).distinct().sorted().forEach(System.out::println);
     }
